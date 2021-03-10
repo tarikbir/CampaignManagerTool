@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CampaignManagerUnitTests
+﻿namespace CampaignManagerUnitTests
 {
     class TestBase
     {
-        public Currency ACurrency()
-        {
-            return new Currency()
-        }
+        
     }
 }
