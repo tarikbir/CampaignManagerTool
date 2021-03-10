@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Configurations>Debug;Release;Test</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget></PlatformTarget>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|AnyCPU'">
+    <PlatformTarget />
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DesignDocument.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DesignData Include="DesignDocument.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="TestWindow.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
+</Project>

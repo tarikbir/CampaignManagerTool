@@ -1,0 +1,43 @@
+﻿<Window x:Class="CampaignManagerTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CampaignManagerTool"
+        mc:Ignorable="d"
+        Title="Campaign Manager Tool" Height="768" Width="1024" MinHeight="768" MinWidth="1024">
+    <Grid>
+        <Menu Height="18" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <MenuItem Header="Campaign">
+                <MenuItem Header="New"/>
+                <MenuItem Header="Open"/>
+                <MenuItem Header="Save"/>
+                <MenuItem Header="Save As..."/>
+                <MenuItem Header="Close"/>
+                <Separator/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="References">
+                <MenuItem Header="Quick Ref"/>
+                <MenuItem Header="Bestiary"/>
+                <MenuItem Header="Spellbook"/>
+                <MenuItem Header="Soundboard"/>
+                <Separator/>
+                <MenuItem Header="Random Tables"/>
+            </MenuItem>
+            <MenuItem Header="Tools">
+                <MenuItem Header="Countdown"/>
+                <MenuItem Header="Calendar"/>
+                <MenuItem Header="Translator"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="Getting Started"/>
+                <MenuItem Header="User Guide"/>
+                <Separator/>
+                <MenuItem Header="About..."/>
+                <MenuItem Header="Check For Updates"/>
+            </MenuItem>
+        </Menu>
+        <Grid Margin="0,18,0,0"/>
+    </Grid>
+</Window>
