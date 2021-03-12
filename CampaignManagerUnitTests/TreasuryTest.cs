@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 namespace CampaignManagerUnitTests
 {
-    public class Tests
+    public class TreasuryTest : TestBase
     {
         Treasury treasury;
+
         [SetUp]
         public void Setup()
         {

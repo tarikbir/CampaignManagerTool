@@ -1,6 +1,6 @@
 ﻿namespace CampaignManagerUnitTests
 {
-    class TestBase
+    public class TestBase
     {
         
     }

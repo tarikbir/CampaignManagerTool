@@ -47,6 +47,8 @@
 	- [ ] Map
 	- [ ] Handouts
 - [ ] Custom things
+	- [ ] Custom stats (str, dex, ...)
+	- [ ] Custom pages
 - [ ] Roll
 - [ ] Donations? Patreon?
 
