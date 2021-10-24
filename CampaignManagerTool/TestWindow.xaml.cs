@@ -1,42 +1,52 @@
-﻿using System.Windows;
+﻿using Microsoft.Win32;
+using System;
+using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace CampaignManagerTool
 {
     public partial class TestWindow : Window
     {
+        public bool isAddingPin;
+
         public TestWindow()
         {
             InitializeComponent();
-            SetUIForTest();
-
-            UpdateLabel();
+            isAddingPin = false;
         }
 
         private void btnClick1_Click(object sender, RoutedEventArgs e)
         {
-            UpdateLabel();
+            //import map
+            BitmapImage mapImage;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Bitmap image files (*.bmp; *.gif; *.png; *.jpg; *.xpm; *.xbm; *.tiff; *.ppm)|*.bmp; *.gif; *.png; *.jpg; *.xpm; *.xbm; *.tif; *.tiff; *.ppm|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    mapImage = new BitmapImage(new Uri(openFileDialog.FileName));
+                    imgMap.Source = mapImage;
+                }
+                catch(Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "An Error Occured", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
         private void btnClick2_Click(object sender, RoutedEventArgs e)
         {
-            UpdateLabel();
+            //add pin
+            isAddingPin = true;
+
         }
 
         private void btnClick3_Click(object sender, RoutedEventArgs e)
         {
-            UpdateLabel();
-        }
-
-        public void SetUIForTest(string btn1 = default, string btn2 = default, string btn3 = default)
-        {
-            btnClick1.Content = btn1;
-            btnClick2.Content = btn2;
-            btnClick3.Content = btn3;
-        }
-
-        public void UpdateLabel(string newText = default)
-        {
-            lblTextBox.Content = newText;
+            //clear map?
+            imgMap.Source = null;
         }
     }
 }

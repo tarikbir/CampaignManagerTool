@@ -1,4 +1,7 @@
-﻿public abstract class Creature
+﻿using System.Collections.Generic;
+using System.Windows.Controls;
+
+public abstract class Creature
 {
     public string Name;
     public CreatureSize Size;
@@ -6,7 +9,9 @@
 
     public string ArmorClass;
     public string HitPoints;
-    public string Speed;
+    public List<Pop> Speed;
 
+    public StatSystem Stats;
 
+    public Image Image;
 }

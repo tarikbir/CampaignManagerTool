@@ -6,7 +6,7 @@ public class StatSystem
 
     public StatSystem(int str, int dex, int con, int intl, int wis, int cha)
     {
-        /**Hard-coded stat system for D&D. Will change into custom later.*/
+        /**Hard-coded stat system for D&D. Will change into custom very later.*/
         Stats = new Stat[6]
         {
             new Stat("Strength", "STR", str, CalculateModifier(str)),

@@ -7,10 +7,39 @@
         mc:Ignorable="d"
         Title="TestWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnClick1" Content="Button 1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="btnClick1_Click"/>
-        <Button x:Name="btnClick2" Content="Button 2" HorizontalAlignment="Left" Margin="130,10,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="btnClick2_Click"/>
-        <Button x:Name="btnClick3" Content="Button 3" HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="btnClick3_Click"/>
-        <Label x:Name="lblTextBox" Content="Label" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="100" Width="477"/>
-        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="367,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" VerticalContentAlignment="Center"/>
+        <Button x:Name="btnClick1"
+                Content="Import Map"
+                HorizontalAlignment="Left"
+                Margin="10,10,0,0"
+                VerticalAlignment="Top"
+                Height="30"
+                Width="100"
+                Click="btnClick1_Click"/>
+        
+        <Button x:Name="btnClick2"
+                Content="Add Node"
+                HorizontalAlignment="Left"
+                Margin="130,10,0,0"
+                VerticalAlignment="Top"
+                Height="30" Width="100"
+                Click="btnClick2_Click"/>
+        
+        <Button x:Name="btnClick3"
+                Content="Clear Map"
+                HorizontalAlignment="Left"
+                Margin="250,10,0,0"
+                VerticalAlignment="Top"
+                Height="30"
+                Width="100"
+                Click="btnClick3_Click"/>
+        
+        <Canvas x:Name="imgCanvas"
+                HorizontalAlignment="Left"
+                Margin="10,50,0,0"
+                VerticalAlignment="Top">
+
+            <Image x:Name="imgMap"/>
+
+        </Canvas>
     </Grid>
 </Window>
